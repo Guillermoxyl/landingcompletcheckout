@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>¡Pago Exitoso! - Activación Manual</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=VT323&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ESTILOS BASE (Mismos que la landing anterior) --- */
+        :root {
+            --mc-bg-page: #191919;
+            --mc-bg-card: #282828;
+            --mc-bg-card-hover: #313233;
+            --mc-green-main: #3C8527;
+            --mc-green-light: #58A53E;
+            --mc-text-white: #FFFFFF;
+            --mc-text-gray: #CCCCCC;
+            --mc-red: #D22630;
+            --mc-gold: #F5C342;
+            --font-title: 'VT323', monospace;
+            --font-body: 'Noto Sans', sans-serif;
+            --discord-color: #5865F2;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body {
+            background-color: var(--mc-bg-page);
+            color: var(--mc-text-white);
+            font-family: var(--font-body);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            line-height: 1.1;
+            text-shadow: 2px 2px 0 #000;
+        }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; width: 100%; }
+
+        /* --- NAV SIMPLIFICADO --- */
+        nav {
+            background: #000;
+            height: 90px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid #333;
+        }
+        .logo-nav { height: 80px; width: auto; }
+
+        /* --- HEADER DE ÉXITO --- */
+        .success-header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .success-title {
+            color: var(--mc-green-light);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- CAJA DE INSTRUCCIONES --- */
+        .instruction-box {
+            background: var(--mc-bg-card);
+            border: 4px solid #000;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        /* --- PASOS --- */
+        .step-item {
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #444;
+            padding-bottom: 30px;
+        }
+        .step-item:last-child { border-bottom: none; }
+
+        .step-badge {
+            background: var(--mc-gold);
+            color: #000;
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            padding: 5px 15px;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 2px solid #000;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .step-desc {
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        .img-guide {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border: 3px solid #000;
+            display: block;
+            margin: 10px 0;
+            box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+        }
+
+        /* --- BOTÓN DISCORD --- */
+        .btn-discord {
+            background-color: var(--discord-color);
+            color: #fff;
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: var(--font-body);
+            font-weight: 900;
+            text-decoration: none;
+            border: 2px solid #000;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            box-shadow: inset 3px 3px 0 rgba(255,255,255,0.2);
+            transition: transform 0.1s;
+        }
+        .btn-discord:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-discord:active { transform: translateY(2px); }
+
+        /* --- HIGHLIGHT TEXT --- */
+        .copy-text {
+            background: #000;
+            color: var(--mc-green-light);
+            font-family: monospace;
+            padding: 5px 10px;
+            border: 1px solid #444;
+            font-weight: bold;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            nav { height: 70px; }
+            .logo-nav { height: 60px; }
+            .success-title { font-size: 2.5rem; }
+            .instruction-box { padding: 20px; }
+            .step-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="https://imgur.com/Hms2bZH.png" alt="Logo CompletCraft" class="logo-nav">
+    </nav>
+
+    <div class="container">
+        
+        <div class="success-header">
+            <span class="success-icon">✅</span>
+            <h1 class="success-title">¡PAGO RECIBIDO!</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                Tu pago se ha procesado correctamente. Ahora solo falta <strong>activar tu rango y darte acceso al panel</strong> manualmente.
+            </p>
+        </div>
+
+        <div class="instruction-box">
+            <h2 style="text-align: center; border-bottom: 4px solid #000; padding-bottom: 20px; margin-bottom: 30px;">
+                SIGUE ESTOS 4 PASOS PARA ACTIVARTE:
+            </h2>
+
+            <div class="step-item">
+                <div class="step-badge">PASO 1</div>
+                <h3 class="step-title">ENTRA AL SERVIDOR DE DISCORD</h3>
+                <p class="step-desc">Es obligatorio estar dentro para poder darte el rol de cliente y el acceso.</p>
+                <a href="https://discord.com/invite/dyzrWnjmsJ" target="_blank" class="btn-discord">
+                    UNIRME AL DISCORD AHORA 🚀
+                </a>
+            </div>
+
+            <div class="step-item">
+                <div class="step-badge">PASO 2</div>
+                <h3 class="step-title">VERIFÍCATE</h3>
+                <p class="step-desc">Ve al canal de verificación y completa el captcha o reacciona para que te aparezcan todos los canales.</p>
+                <img src="https://imgur.com/wNEKuED.png" alt="Verificación Discord" class="img-guide">
+            </div>
+
+            <div class="step-item">
+                <div class="step-badge">PASO 3</div>
+                <h3 class="step-title">ABRE UN TICKET</h3>
+                <p class="step-desc">Busca la sección de <strong>"Soporte"</strong> o <strong>"Tickets"</strong> y dale clic al botón para abrir uno nuevo.</p>
+                
+                <div style="display: grid; gap: 10px;">
+                    <img src="https://imgur.com/QTrvfHy.png" alt="Canal Ticket" class="img-guide">
+                    <img src="https://imgur.com/VrTowTK.png" alt="Abrir Ticket" class="img-guide">
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-badge">PASO 4</div>
+                <h3 class="step-title">ENVÍA EL COMPROBANTE</h3>
+                <p class="step-desc">
+                    Se abrirá un chat privado. Rellena los datos así:<br><br>
+                    • Juego: <strong>Minecraft</strong><br>
+                    • Medio de Pago: <span class="copy-text">Craft-pagado</span><br><br>
+                    <strong>Y ADJUNTA LA FOTO/CAPTURA DE TU PAGO.</strong>
+                </p>
+                <img src="https://imgur.com/yu82Jnc.png" alt="Enviar Formulario Ticket" class="img-guide">
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; background: #222; padding: 20px; border: 2px solid var(--mc-gold);">
+                <p style="color: var(--mc-gold); font-weight: bold; margin: 0;">
+                    ¡LISTO! En breves instantes un administrador revisará tu ticket y te dará acceso inmediato al Panel CompletCraft.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer style="background: #000; padding: 30px 0; text-align: center; border-top: 4px solid #333;">
+        <p style="font-size: 0.9rem; color: #555;">CompletCraft - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
